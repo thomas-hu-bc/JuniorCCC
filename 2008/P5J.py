@@ -41,7 +41,6 @@ def losingCombo(a, b, c, d):
             if not winningCombo(a - ra, b - rb, c - rc, d - rd):
                 result = False
                 break
-
     if result:
         used[(a, b, c, d)] = 'l' # if result is True, means Patrick will lose
         return True
