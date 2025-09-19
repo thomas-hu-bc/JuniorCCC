@@ -82,7 +82,7 @@ def cross_spiral(w, h, cw, ch, steps, debug=False):
 # Example usage
 if __name__ == "__main__":
     # w, h, cw, ch, steps = map(int, input("Enter w h cw ch steps: ").split())
-    w, h, cw, ch, steps = [20, 8, 3, 2, 57]
+    w, h, cw, ch, steps = [10, 8, 3, 2, 52]
     c, r = cross_spiral(w, h, cw, ch, steps, debug=True)
     print("Final position:")
     print(c)

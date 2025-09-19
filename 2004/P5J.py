@@ -72,9 +72,12 @@ def fractal(level, width, xcoor):
 
 
 def main():
-    level = int(input("Enter level: "))
-    width = int(input("Enter width: "))
-    xcoor = int(input("Enter x coordinate: "))
+    # level = int(input("Enter level: "))
+    # width = int(input("Enter width: "))
+    # xcoor = int(input("Enter x coordinate: "))
+    level = 3
+    width = 27
+    xcoor = 5
 
     result = fractal(level, width, xcoor)
     print("Y coordinates where vertical slice crosses fractal:")
@@ -88,7 +91,7 @@ if __name__ == "__main__":
     log_file = log_dir / "WeChat_New_Client.txt"
 
     logging.basicConfig(
-        level=logging.DEBUG,
+        level=logging.INFO,
         format="%(asctime)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s",
         handlers=[
             logging.FileHandler(log_file, encoding="utf-8"),  # log to file
