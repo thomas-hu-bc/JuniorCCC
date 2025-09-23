@@ -10,7 +10,8 @@ letter_number_mapping= {"A":0,"B":1,'C':2,'D':3,'E':4,'F':5,'G':6,"H":7,"I":8,"J
 
 number_letter_mapping = {v:k for k, v in letter_number_mapping.items()}
 
-def make_shift(index,shift,letter):
+def make_shift(shift,letter):
+
     shift_result = letter_number_mapping[letter]+shift
     return number_letter_mapping[shift_result%26]
 
@@ -31,7 +32,7 @@ def main():
     keyword_length = len(keyword)
     encrypted_word = []
     for index, letter in enumerate(word_list):
-        encrypted_word.append(make_shift(index%keyword_length,keyword_numbers[index%keyword_length],letter))
+        encrypted_word.append(make_shift(keyword_numbers[index%keyword_length],letter))
 
     print(encrypted_word)
 
